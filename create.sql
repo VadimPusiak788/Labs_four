@@ -17,7 +17,7 @@ CREATE TABLE Feature(
     player_name VARCHAR(100) NOT NULL,
     years NUMBER(5) NOT NULL,
     teams VARCHAR(100) NOT NULL,
-    posittion VARCHAR(20) NOT NULL,
+    position VARCHAR(20) NOT NULL,
     CONSTRAINT feature_pk PRIMARY KEY (player_name, years, teams)
 );
 CREATE TABLE Enemy_team(
