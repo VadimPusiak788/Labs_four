@@ -17,17 +17,21 @@ CREATE TABLE Feature(
     player_name VARCHAR(100) NOT NULL,
     years NUMBER(5) NOT NULL,
     teams VARCHAR(100) NOT NULL,
-    posittion VARCHAR(20) NOT NULL
+    posittion VARCHAR(20) NOT NULL,
+    CONSTRAINT feature_pk PRIMARY KEY (player_name, years, teams)
 );
 CREATE TABLE Enemy_team(
     enemy_teams VARCHAR(100) NOT NULL,
     CONSTRAINT enemy_pk PRIMARY KEY (enemy_teams)
 );
 CREATE TABLE Game(
+    player_name VARCHAR(100) NOT NULL,
+    years NUMBER(5) NOT NULL,
     teams VARCHAR(100) NOT NULL,
     enemy_teams VARCHAR(50) NOT NULL,
     score NUMBER(3)
 );
+
 ALTER TABLE Feature
 ADD CONSTRAINT fk_years
     FOREIGN KEY (years)
@@ -42,14 +46,13 @@ ALTER TABLE Feature
 ADD CONSTRAINT fk_player
     FOREIGN KEY (player_name)
     REFERENCES Player(player_name);
-    
+
 ALTER TABLE Game
 ADD CONSTRAINT fk_teams
-    FOREIGN KEY (teams)
-    REFERENCES Team(teams);
+    FOREIGN KEY (teams, years, player_name)
+    REFERENCES Feature(teams, years, player_name);
 
 ALTER TABLE Game
 ADD CONSTRAINT fk_enemy
     FOREIGN KEY (enemy_teams)
     REFERENCES Enemy_team(enemy_teams);
- 
