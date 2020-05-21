@@ -13,7 +13,7 @@ CREATE TABLE Team(
     teams VARCHAR(100) NOT NULL,
     CONSTRAINT team_pk PRIMARY KEY (teams)
 );
-CREATE TABLE Ñharacteristic(
+CREATE TABLE Feature(
     player_name VARCHAR(100) NOT NULL,
     years NUMBER(5) NOT NULL,
     teams VARCHAR(100) NOT NULL,
@@ -28,17 +28,17 @@ CREATE TABLE Game(
     enemy_teams VARCHAR(50) NOT NULL,
     score NUMBER(3)
 );
-ALTER TABLE Ñharacteristic
+ALTER TABLE Feature
 ADD CONSTRAINT fk_years
     FOREIGN KEY (years)
     REFERENCES Year(years);
 
-ALTER TABLE Ñharacteristic
+ALTER TABLE Feature
 ADD CONSTRAINT fk_team
     FOREIGN KEY (teams)
     REFERENCES  Team(teams);
 
-ALTER TABLE Ñharacteristic
+ALTER TABLE Feature
 ADD CONSTRAINT fk_player
     FOREIGN KEY (player_name)
     REFERENCES Player(player_name);
@@ -53,10 +53,3 @@ ADD CONSTRAINT fk_enemy
     FOREIGN KEY (enemy_teams)
     REFERENCES Enemy_team(enemy_teams);
  
-
-    
-    
-    
-    
-    
-    
