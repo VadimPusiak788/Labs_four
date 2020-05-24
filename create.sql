@@ -29,7 +29,8 @@ CREATE TABLE Game(
     years NUMBER(5) NOT NULL,
     teams VARCHAR(100) NOT NULL,
     enemy_teams VARCHAR(50) NOT NULL,
-    score NUMBER(3)
+    score NUMBER(3),
+    CONSTRAINT game_pk PRIMARY KEY (player_name, years, teams)
 );
 
 ALTER TABLE Feature
