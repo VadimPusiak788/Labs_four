@@ -36,12 +36,12 @@ INSERT INTO enemy_team(enemy_teams) VALUES('Miami Heat');
 INSERT INTO enemy_team(enemy_teams) VALUES('Atlanta Hawks');
 
 INSERT INTO game(player_name, years, teams, enemy_teams, score)
-VALUES('Anthony Davis', 2012, 'New Orleans Pelicans', 'Miami Heat', 10);
+VALUES('Klay Thompson', 2010, 'Utah Jazz', 'Miami Heat', 10);
 INSERT INTO game(player_name, years, teams, enemy_teams, score)
-VALUES('Klay Thompson', 2007, 'Los Angeles Clippers', 'Detroit Pistons', 13);
+VALUES('Kyle Lowry', 2012, 'Utah Jazz', 'Detroit Pistons', 13);
 INSERT INTO game(player_name, years, teams, enemy_teams, score)
 VALUES('Klay Thompson', 2007, 'Los Angeles Clippers', 'Miami Heat', 7);
 INSERT INTO game(player_name, years, teams, enemy_teams, score)
-VALUES('Klay Thompson', 2010, 'Utah Jazz', 'Atlanta Hawks', 15);
+VALUES('Stephen Curry', 2007, 'Los Angeles Clippers', 'Atlanta Hawks', 15);
 INSERT INTO game(player_name, years, teams, enemy_teams, score)
 VALUES('Anthony Davis', 2012, 'New Orleans Pelicans', 'Atlanta Hawks', 15);
